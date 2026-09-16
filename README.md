@@ -1,10 +1,12 @@
 # APIRESTful
 
-> Projeto de nível básico para demonstrar todos os conceitos de uma API RESTful,
+> Projeto de nível básico para demonstrar os conceitos de uma API RESTful,
 > usando **VSCode**, **.NET 10** e **C#**.
 >
-> Comentários iniciados com `#>` foram adicionados para indicar **onde e por que**
-> cada diretriz REST (constraints de Roy Fielding) está sendo aplicada.
+> Diretriz REST, de Roy Fielding
+
+> https://www.linkedin.com/in/royfielding/
+> https://www.reddit.com/r/programacao/comments/1nbstr1/pare_de_chamar_tudo_de_restful_o_apelo_de_roy/
 
 ---
 
@@ -432,11 +434,11 @@ public class ProductsController : ControllerBase
 | Diretriz REST | Onde está aplicada |
 |---|---|
 | **Client-Server** | Separação entre `Controllers` (servidor) e qualquer cliente HTTP que consome a API |
-| **Stateless** | `ProductRepository` (Singleton) guarda o estado do **recurso**, nunca sessão do cliente |
+| **Stateless** | Nunca gera sessão do cliente |
 | **Cacheable** | `[ResponseCache(Duration = 30)]`, `AddResponseCaching()`, header `ETag` manual |
 | **Interface Uniforme** — identificação de recursos | Rotas `/api/v{version}/products/{id}` |
 | — manipulação via representações | DTOs (`ProductCreateDto`, `ProductUpdateDto`, `ProductResponseDto`) |
 | — mensagens autodescritivas | `[Produces("application/json")]`, status codes corretos, Swagger/OpenAPI |
-| — HATEOAS | Lista de `LinkDto` (`self`, `update`, `delete`) dentro da resposta |
+| — HATEOAS | é a prática de incluir, dentro da própria resposta da API, os links das ações possíveis para aquele recurso — serve para o cliente descobrir "o que posso fazer a partir daqui" sem precisar ter as URLs fixas no código dele, como fizemos com o Links (self, update, delete) no ProductResponseDto. |
 | **Sistema em Camadas** | Middlewares (`UseResponseCaching`, `UseHttpsRedirection`, versionamento via `Asp.Versioning`) |
-| **Code on Demand** (opcional) | Não implementado — constraint opcional, não se aplica a uma API JSON pura |
+
