@@ -1,0 +1,6 @@
+@APIRESTful_HostAddress = http://localhost:5095
+
+GET {{APIRESTful_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)microsoft.extensions.apidescription.server\10.0.0\build\Microsoft.Extensions.ApiDescription.Server.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.apidescription.server\10.0.0\build\Microsoft.Extensions.ApiDescription.Server.targets')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.aspnetcore.openapi\10.0.11\build\Microsoft.AspNetCore.OpenApi.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.aspnetcore.openapi\10.0.11\build\Microsoft.AspNetCore.OpenApi.targets')" />
+    <Import Project="$(NuGetPackageRoot)asp.versioning.abstractions\10.2.1\buildTransitive\Asp.Versioning.Abstractions.targets" Condition="Exists('$(NuGetPackageRoot)asp.versioning.abstractions\10.2.1\buildTransitive\Asp.Versioning.Abstractions.targets')" />
+    <Import Project="$(NuGetPackageRoot)asp.versioning.http\10.2.1\buildTransitive\Asp.Versioning.Http.targets" Condition="Exists('$(NuGetPackageRoot)asp.versioning.http\10.2.1\buildTransitive\Asp.Versioning.Http.targets')" />
+  </ImportGroup>
+</Project>
