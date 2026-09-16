@@ -4,7 +4,6 @@
 > usando **VSCode**, **.NET 10** e **C#**.
 >
 > Diretriz REST, de Roy Fielding
-
 > https://www.linkedin.com/in/royfielding/
 > https://www.reddit.com/r/programacao/comments/1nbstr1/pare_de_chamar_tudo_de_restful_o_apelo_de_roy/
 
